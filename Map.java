@@ -10,4 +10,22 @@
  */
 public class Map {
     
+    private int rows, columns;
+    
+    public Map(int rows,int columns){
+        this.rows=rows;
+        this.columns=columns;
+    }
+    public void setRows(int rows){
+        this.rows=rows;
+    }
+    public void setColumns(int columns){
+        this.columns=columns;
+    }
+    public int getRows(){
+        return this.rows;
+    }
+    public int getColumns(){
+        return this.columns;
+    }
 }
