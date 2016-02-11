@@ -34,7 +34,13 @@ public class Drone {
             this.products=items; 
         }
     }
-    public void deliver(){
-        
+    public void deliver(Order order){
+    	if(order.getCustomer().getLocation().equals(this.location)) { // if in the same location
+            //load items
+    		order.getCustomer().setProducts(this.products) ;
+               
+    } else {
+    		//Item not available in inventory
     }
+}
 }

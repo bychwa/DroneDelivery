@@ -21,5 +21,10 @@ public class Customer {
       public void setProducts(Product products[]){
           this.products=products;
       }
-      
+	public Location getLocation() {
+		return location;
+	}
+	public void setLocation(Location location) {
+		this.location = location;
+	}
 }   

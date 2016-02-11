@@ -28,7 +28,7 @@ public class Order {
     public void setProducts(Product[] products) {
             this.products = products;
     }
-    public Product[] getCustomer() {
+    public Customer getCustomer() {
             return customer;
     }
 
