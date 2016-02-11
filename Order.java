@@ -13,10 +13,12 @@ public class Order {
     private Product products[];
     private Location deliveredLocation;
     private String status;
+    private Customer customer;
     
-    public Order(Product products[],Location del){
+    public Order(Product products[],Location del, Customer customer){
             this.products=products;
             this.deliveredLocation=del;
+            this.customer=customer;
     }
 
     public Product[] getProducts() {
@@ -25,6 +27,13 @@ public class Order {
 
     public void setProducts(Product[] products) {
             this.products = products;
+    }
+    public Product[] getCustomer() {
+            return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+            this.customer = customer;
     }
 
     public Location getDeliveredLocation() {

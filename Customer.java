@@ -18,7 +18,8 @@ public class Customer {
           this.location=location;
           this.products=products;
       }
-      public void receive(Product products[]){
+      public void setProducts(Product products[]){
           this.products=products;
       }
+      
 }   
