@@ -17,5 +17,21 @@ public class Order {
             this.products=products;
             this.deliveredLocation=del;
     }
+
+	public Product[] getProducts() {
+		return products;
+	}
+
+	public void setProducts(Product[] products) {
+		this.products = products;
+	}
+
+	public Location getDeliveredLocation() {
+		return deliveredLocation;
+	}
+
+	public void setDeliveredLocation(Location deliveredLocation) {
+		this.deliveredLocation = deliveredLocation;
+	}
     
 }
