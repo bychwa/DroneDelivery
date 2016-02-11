@@ -1,15 +1,13 @@
 
 public class Warehouse {
-	private Product product[];
+	
+        private Product product[];
         private Location location;
         
         public Warehouse(Product product[],Location location ){
-<<<<<<< Updated upstream
-            this.product=product; this.location=location;
-=======
             this.product=product; 
             this.location=location;
->>>>>>> Stashed changes
+
         }
 	
         public Product[] getProducts() {
