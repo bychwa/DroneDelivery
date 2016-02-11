@@ -11,6 +11,11 @@
 public class Drone {
     private Product products[];
     private Location location;
+    private int id;
+    
+    public Drone(int id, Product products, Location location){
+        this.id=id; this.products=products; this.location=location;
+    }    
     
     public void fly_to(Location end){
         Location start=this.location;
