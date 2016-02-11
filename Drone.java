@@ -18,13 +18,13 @@ public class Drone {
         int y1=start.getColumn();
         int x2=end.getRow();
         int y2=end.getColumn();
-        int distanceMoved = ((x2-x1)**2 + (y2-y1)**2)**(1/2);
+        int distanceMoved = (int) Math.pow(( Math.pow((x2-x1), 2) + Math.pow((y2-y1), 2)), 0.5);
         
         this.location=end;
         
     }
-    public void load(Products items[], Warehouse wh){
-        if(wh.getLocation().equals(this.location){ // if in the same location
+    public void load(Product items[], Warehouse wh){
+        if(wh.getLocation().equals(this.location)) { // if in the same location
             //load items
                this.products=items; 
         }else{  // if different location
