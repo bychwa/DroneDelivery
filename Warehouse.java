@@ -3,7 +3,7 @@ public class Warehouse {
 	private Product product[];
         private Location location;
         
-        public Warehouse(Product product,Location location ){
+        public Warehouse(Product product[],Location location ){
             this.product=product; this.location=location;
         }
 	
