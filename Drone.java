@@ -13,7 +13,7 @@ public class Drone {
     private Location location;
     private int id;
     
-    public Drone(int id, Product products, Location location){
+    public Drone(int id, Product product[], Location location){
         this.id=id; this.products=products; this.location=location;
     }    
     

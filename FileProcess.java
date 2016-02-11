@@ -18,10 +18,12 @@ public class FileProcess {
                         String Line =scn.nextLine();
                         if(count==1){
                             String[] splited = Line.split("\\s+");    
-                            turns=splited[3]; max_payload=splited[4];
-                            no_drones=splited[2];
+
+                            turns= Integer.parseInt(splited[3]); 
+                            max_payload=Integer.parseInt(splited[4]);
+                            no_drones=Integer.parseInt(splited[2]);
                             
-                            Map cityMap=new Map(splited[0],splited[1]);
+                            Map cityMap= new Map(Integer.parseInt(splited[0]),Integer.parseInt(splited[1]));
                             
                             for(int i=0; i<no_drones;i++){
                                 Location initialLocation=new Location(0,0);
@@ -29,24 +31,23 @@ public class FileProcess {
                                 drones.add(newDrone);
                             }
                             
-                            System.out.println("row "+splited[0]+" col "+splited[1]);
                             
                         }
                         if(count==2){
                             String[] splited = Line.split("\\s+");    
-                            no_products_types=splited[0]; 
+                            no_products_types=Integer.parseInt(splited[0]); 
                         }
                         if(count== 3){
                             String[] splited = Line.split("\\s+");    
                             for(int i=0; i<splited.length; i++){
-                                Product pd=new Product(splited[i],i);
+                                Product pd=new Product(Integer.parseInt(splited[i]),i);
                                 products.add(pd);
                             }
                         }
                         if(count== 4){
                             String[] splited = Line.split("\\s+");    
                             for(int i=0; i<splited.length; i++){
-                                Warehouse wh=new Warehouse(products.toArray(),new Location(0,0));
+                                Warehouse wh=new Warehouse(products.toArray(new Product[products.size()]),new Location(0,0));
                                 warehouses.add(wh);
                             }
                         }
@@ -56,6 +57,5 @@ public class FileProcess {
 
             } catch (FileNotFoundException fnfe){
             System.out.println("File not found");}
-		 
 	}
 }
