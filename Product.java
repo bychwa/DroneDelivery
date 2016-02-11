@@ -2,6 +2,9 @@
 public class Product {
 	private int weight;
 	private int productType;
+        public Product(int weight, int productType){
+            this.weight=weight; this.productType=productType;
+        }
 	public int getWeight() {
 		return weight;
 	}
